@@ -1,0 +1,46 @@
+version: "3"
+
+services:
+  wordpress:
+    image: wordpress:latest
+    environment:
+      VIRTUAL_HOST: iap.local
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress
+      WORDPRESS_DB_NAME: wordpress
+    depends_on:
+      - db
+    networks:
+      - front
+      - back
+    volumes:
+      - ./:/var/www/html:rw
+  db:
+    image: mariadb:10.2
+    environment:
+      MYSQL_ROOT_PASSWORD: somewordpress
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+    ports:
+     - 3306:3306
+    networks:
+      - back
+  proxy:
+    image: jwilder/nginx-proxy:alpine
+    ports:
+      - 80:80
+    networks:
+      front:
+        aliases:
+          - iap.local
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+
+networks:
+  front: {}
+  back: {}
+
+volumes:
+  wp: {}
