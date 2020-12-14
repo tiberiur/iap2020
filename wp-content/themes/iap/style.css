@@ -20,7 +20,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 }
 
 body {
-	font-family: 'Libre Baskerville', sans-serif;
+	font-family: 'Tinos', serif;
 	padding: 0;
 	margin: 0;
 }
@@ -45,7 +45,7 @@ figure {
 
 /* Header */
 .header {
-	font-family: 'Libre Baskerville';
+	font-family: 'Tinos';
 	border-bottom: 1px solid rgba(0,0,0,.16);
 }
 .header-inner {
@@ -89,7 +89,7 @@ figure {
 	margin: 0 auto;
 }
 .main-home h2 {
-    font-family: 'Libre Baskerville';
+    font-family: 'Tinos';
     font-weight: 700;
 	font-size: 40px;
 	text-align: center;
@@ -132,7 +132,7 @@ figure {
 	margin-right: 20px;
 }
 .footer marquee span:nth-child(odd) {
-    font-family: 'Libre Baskerville';
+    font-family: 'Tinos';
     font-weight: 700;
 }
 .footer-logo {
