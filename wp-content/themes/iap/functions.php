@@ -20,7 +20,9 @@ add_action( 'after_setup_theme', 'iap2020_theme_support' );
  * Register and Enqueue Styles.
  */
 function iap2020_register_styles() {
-    wp_enqueue_style( 'style', get_stylesheet_uri() );
+	wp_enqueue_style( 'style', get_stylesheet_uri() );
+
+	wp_enqueue_style( 'iap2020-google-fonts', 'https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap', false ); 
 }
 
 add_action( 'wp_enqueue_scripts', 'iap2020_register_styles' );
