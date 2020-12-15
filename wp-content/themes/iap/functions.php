@@ -62,3 +62,34 @@ function iap2020_menus() {
 }
 
 add_action( 'init', 'iap2020_menus' );
+
+/**
+ * Register widget area.
+ *
+ * @since 1.0.0
+ *
+ * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
+ *
+ * @return void
+ */
+function iap_widgets_init() {
+
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Footer', 'iap' ),
+			'id'            => 'footer',
+			'description'   => esc_html__( 'Add widgets here to appear in your footer.', 'twentytwentyone' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+}
+add_action( 'widgets_init', 'iap_widgets_init' );
+
+// Remove widget title
+add_filter( 'widget_title', 'remove_widget_title' );
+function remove_widget_title( $widget_title ) {
+    return;
+}

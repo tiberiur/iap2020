@@ -29,7 +29,7 @@ a {
 	text-decoration: none;
 }
 a:hover {
-	color: #1f714a;
+	color: #22BFA0;
 }
 
 ul {
@@ -129,16 +129,16 @@ figure {
 .footer marquee span:nth-child(odd) {
     font-weight: 700;
 }
-.footer-logo {
+.footer .widget_text:not(.widget_custom_html) {
+	max-width: 488px;
+	margin: 0 auto;
+	line-height: 1.4;
+}
+.footer .widget_text:not(.widget_custom_html) a {
 	display: block;
 	font-size: 30px;
 	text-decoration: none;
-	margin-top: 130px;
-}
-.footer p {
-	max-width: 488px;
-	margin: 25px auto 0;
-	line-height: 1.4;
+	margin: 130px 0 25px;
 }
 .footer a {
 	color: #FFF;
