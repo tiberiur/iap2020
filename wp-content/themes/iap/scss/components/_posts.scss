@@ -1,0 +1,19 @@
+.posts {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.post {
+	width: 50%;
+	padding: 0 14px;
+	margin-bottom: 65px;
+	color: #000;
+}
+.post-title {
+	font-size: 22px;
+	margin: 20px 0 0;
+}
+.post-thumbnail img {
+	display: block;
+	width: 100%;
+}

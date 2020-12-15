@@ -13,149 +13,165 @@ License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
-/* General */
-
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-	font-family: 'Tinos', serif;
-	padding: 0;
-	margin: 0;
+  font-family: "Tinos", serif;
+  padding: 0;
+  margin: 0;
 }
 
 a {
-	text-decoration: none;
+  text-decoration: none;
 }
+
 a:hover {
-	color: #22BFA0;
+  color: #22BFA0;
 }
 
 ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 figure {
-	padding: 0;
-	margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
-/* Header */
 .header {
-    font-weight: 700;
-	border-bottom: 1px solid rgba(0,0,0,.16);
+  font-weight: 700;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.16);
 }
+
 .header-inner {
-	max-width: 1440px;
-	margin: 0 auto;
-	padding: 0 60px;
-	display: flex;
-	align-items: center;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 60px;
+  display: flex;
+  align-items: center;
 }
+
 .header a {
-	color: #000;
-	display: block;
+  color: #000;
+  display: block;
 }
 
 .header-nav {
-	margin-left: auto;
-	font-size: 20px;
-	text-transform: uppercase;
-}
-.header-nav ul {
-	margin-left: auto;
-	display: flex;
-}
-.header-nav li {
-	margin-left: 30px;
-}
-.header-nav li a {
-	padding: 50px 0;
-}
-.header-nav .current-menu-item {
-	border-bottom: 2px solid #000000;
+  margin-left: auto;
+  font-size: 20px;
+  text-transform: uppercase;
 }
 
-/* Main */
-.main-home {
-	max-width: 668px;
-	margin: 0 auto;
+.header-nav ul {
+  margin-left: auto;
+  display: flex;
 }
+
+.header-nav li {
+  margin-left: 30px;
+}
+
+.header-nav li a {
+  padding: 50px 0;
+}
+
+.header-nav .current-menu-item {
+  border-bottom: 2px solid #000000;
+}
+
+.main-home {
+  max-width: 668px;
+  margin: 0 auto;
+}
+
 .main-home h2 {
-    font-weight: 700;
-	font-size: 40px;
-	text-align: center;
-	margin: 65px 0 40px;
+  font-weight: 700;
+  font-size: 40px;
+  text-align: center;
+  margin: 65px 0 40px;
+}
+
+.footer {
+  background: #000;
+  color: #FFF;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.footer marquee {
+  text-transform: uppercase;
+  font-size: 20px;
+  padding: 20px 0;
+}
+
+.footer marquee span {
+  margin-right: 20px;
+}
+
+.footer marquee span:nth-child(odd) {
+  font-weight: 700;
+}
+
+.footer .widget_text:not(.widget_custom_html) {
+  max-width: 488px;
+  margin: 0 auto;
+  line-height: 1.4;
+}
+
+.footer .widget_text:not(.widget_custom_html) a {
+  display: block;
+  font-size: 30px;
+  text-decoration: none;
+  margin: 130px 0 25px;
+}
+
+.footer a {
+  color: #FFF;
+}
+
+.footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.footer li {
+  margin: 0 15px;
+}
+
+.footer li a {
+  text-decoration: underline;
+}
+
+.footer small {
+  display: block;
+  margin-top: 60px;
 }
 
 .posts {
-	display: flex;
-	flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .post {
-	width: 50%;
-	padding: 0 14px;
-	margin-bottom: 65px;
-	color: #000;
-}
-.post-title {
-	font-size: 22px;
-	margin: 20px 0 0;
-}
-.post-thumbnail img {
-	display: block;
-	width: 100%;
+  width: 50%;
+  padding: 0 14px;
+  margin-bottom: 65px;
+  color: #000;
 }
 
-/* Footer */
-.footer {
-	background: #000;
-	color: #FFF;
-	text-align: center;
-	padding-bottom: 30px;
+.post-title {
+  font-size: 22px;
+  margin: 20px 0 0;
 }
-.footer marquee {
-	text-transform: uppercase;
-	font-size: 20px;
-	padding: 20px 0;
+
+.post-thumbnail img {
+  display: block;
+  width: 100%;
 }
-.footer marquee span {
-	margin-right: 20px;
-}
-.footer marquee span:nth-child(odd) {
-    font-weight: 700;
-}
-.footer .widget_text:not(.widget_custom_html) {
-	max-width: 488px;
-	margin: 0 auto;
-	line-height: 1.4;
-}
-.footer .widget_text:not(.widget_custom_html) a {
-	display: block;
-	font-size: 30px;
-	text-decoration: none;
-	margin: 130px 0 25px;
-}
-.footer a {
-	color: #FFF;
-}
-.footer ul {
-	list-style: none;
-	display: flex;
-	justify-content: center;
-	margin-top: 30px;
-}
-.footer li {
-	margin: 0 15px;
-}
-.footer li a {
-	text-decoration: underline;
-}
-.footer small {
-	display: block;
-	margin-top: 60px;
-}
+

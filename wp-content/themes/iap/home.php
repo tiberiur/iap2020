@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+
 <main class="main-home">
 
     <?php $featuredPost = new WP_Query(array('posts_per_page'=>'1')) ?>
@@ -22,5 +23,7 @@
             <?php $i++; endwhile ?>
         </div>
     <?php endif ?>
+    
 </main>
+
 <?php get_footer(); ?>
