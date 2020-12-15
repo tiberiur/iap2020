@@ -4,8 +4,8 @@
         <h2>All articles</h2>
         <div class="posts">
             <?php while ( have_posts() ):?>
-                <?php get_template_part( 'template-parts/content', 'post' ); ?>
                 <?php the_post(); ?>
+                <?php get_template_part( 'template-parts/content', 'post' ); ?>
             <?php endwhile ?>
         </div>
     <?php endif; ?>

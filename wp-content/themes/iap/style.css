@@ -45,7 +45,7 @@ figure {
 
 /* Header */
 .header {
-	font-family: 'Tinos';
+    font-weight: 700;
 	border-bottom: 1px solid rgba(0,0,0,.16);
 }
 .header-inner {
@@ -58,10 +58,6 @@ figure {
 .header a {
 	color: #000;
 	display: block;
-}
-
-.header-logo {
-	font-size: 36px;
 }
 
 .header-nav {
@@ -89,7 +85,6 @@ figure {
 	margin: 0 auto;
 }
 .main-home h2 {
-    font-family: 'Tinos';
     font-weight: 700;
 	font-size: 40px;
 	text-align: center;
@@ -132,7 +127,6 @@ figure {
 	margin-right: 20px;
 }
 .footer marquee span:nth-child(odd) {
-    font-family: 'Tinos';
     font-weight: 700;
 }
 .footer-logo {

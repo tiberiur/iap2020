@@ -21,7 +21,9 @@
 
             <div class="header-inner">
 
-                <a href="/" class="header-logo">IAP2020</a>
+                <?php if (has_custom_logo()): ?>
+                    <?php the_custom_logo(); ?>
+                <?php endif; ?>
 
                 <?php if(has_nav_menu( 'primary' )):?>
                 <nav class="header-nav">
