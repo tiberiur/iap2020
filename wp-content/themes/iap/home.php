@@ -7,7 +7,17 @@
         <div class="featured-post">
         <?php while($featuredPost->have_posts()): ?>
             <?php $featuredPost->the_post() ?>
-            <?php get_template_part( 'template-parts/content', 'post' ); ?>
+            <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" <?php post_class(); ?> id="post-<?php the_ID(); ?>" class="post">
+                <?php if ( has_post_thumbnail() ): ?>
+                    <figure class="post-thumbnail">
+                        <?php the_post_thumbnail() ?>
+                    </figure>
+                <?php endif ?>
+
+                <?php the_title('<h3 class="post-title">', '</h3>') ?>
+
+                <?php the_excerpt() ?>
+            </a>
         <?php endwhile ?>
         </div>
     <?php endif ?>

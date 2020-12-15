@@ -19,6 +19,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 body {
   font-family: "Tinos", serif;
+  color: #000;
   padding: 0;
   margin: 0;
 }
@@ -50,9 +51,72 @@ figure {
 .header-inner {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 60px;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+}
+
+@media only screen and (min-width: 768px) {
+  .header-inner {
+    flex-wrap: nowrap;
+    padding: 0 60px;
+  }
+}
+
+.header-nav {
+  margin-left: auto;
+  font-size: 20px;
+  text-transform: uppercase;
+  display: none;
+  width: 100%;
+  background: #F4F4F4;
+}
+
+@media only screen and (min-width: 768px) {
+  .header-nav {
+    background: transparent;
+    display: block;
+    width: auto;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .header-nav ul {
+    margin-left: auto;
+    display: flex;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .header-nav li {
+    margin-left: 30px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .header-nav li.current-menu-item {
+    border-bottom: 2px solid #000000;
+  }
+}
+
+.header-nav li a {
+  padding: 10px 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .header-nav li a {
+    padding: 50px 0;
+  }
+}
+
+.header .custom-logo-link {
+  margin-left: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .header .custom-logo-link {
+    margin-left: 0;
+  }
 }
 
 .header a {
@@ -60,27 +124,31 @@ figure {
   display: block;
 }
 
-.header-nav {
-  margin-left: auto;
-  font-size: 20px;
-  text-transform: uppercase;
+.menu-input {
+  display: none;
 }
 
-.header-nav ul {
+.menu-input:checked ~ .header-nav {
+  display: block;
+}
+
+.menu-input:checked ~ .menu-trigger {
+  background: #F4F4F4;
+}
+
+.menu-trigger {
   margin-left: auto;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90px;
+  height: 90px;
 }
 
-.header-nav li {
-  margin-left: 30px;
-}
-
-.header-nav li a {
-  padding: 50px 0;
-}
-
-.header-nav .current-menu-item {
-  border-bottom: 2px solid #000000;
+@media only screen and (min-width: 768px) {
+  .menu-trigger {
+    display: none;
+  }
 }
 
 .main-home {
@@ -90,9 +158,16 @@ figure {
 
 .main-home h2 {
   font-weight: 700;
-  font-size: 40px;
+  font-size: 32px;
   text-align: center;
-  margin: 65px 0 40px;
+  margin: 55px 0 30px;
+}
+
+@media only screen and (min-width: 768px) {
+  .main-home h2 {
+    font-size: 40px;
+    margin: 65px 0 40px;
+  }
 }
 
 .footer {
@@ -100,6 +175,25 @@ figure {
   color: #FFF;
   text-align: center;
   padding-bottom: 30px;
+}
+
+.footer .widget_text:not(.widget_custom_html) {
+  max-width: 488px;
+  margin: 0 auto;
+  line-height: 1.4;
+}
+
+.footer .widget_text:not(.widget_custom_html) a {
+  display: block;
+  font-size: 30px;
+  text-decoration: none;
+  margin: 60px 0 25px;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer .widget_text:not(.widget_custom_html) a {
+    margin: 130px 0 25px;
+  }
 }
 
 .footer marquee {
@@ -114,19 +208,6 @@ figure {
 
 .footer marquee span:nth-child(odd) {
   font-weight: 700;
-}
-
-.footer .widget_text:not(.widget_custom_html) {
-  max-width: 488px;
-  margin: 0 auto;
-  line-height: 1.4;
-}
-
-.footer .widget_text:not(.widget_custom_html) a {
-  display: block;
-  font-size: 30px;
-  text-decoration: none;
-  margin: 130px 0 25px;
 }
 
 .footer a {
@@ -153,16 +234,48 @@ figure {
   margin-top: 60px;
 }
 
+.featured-post {
+  margin-top: 50px;
+  padding: 0 14px;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .featured-post {
+    margin-top: 75px;
+  }
+}
+
 .posts {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 65px;
 }
 
 .post {
-  width: 50%;
+  display: block;
   padding: 0 14px;
-  margin-bottom: 65px;
+  margin-bottom: 40px;
   color: #000;
+}
+
+@media only screen and (min-width: 640px) {
+  .post {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .post {
+    margin-bottom: 65px;
+  }
+}
+
+.featured-post .post {
+  width: 100%;
+  border-bottom: 1px solid #000;
+  margin-bottom: 0;
+  padding-bottom: 35px;
 }
 
 .post-title {
@@ -170,8 +283,33 @@ figure {
   margin: 20px 0 0;
 }
 
+.featured-post .post-title {
+  font-size: 36px;
+  margin-top: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .featured-post .post-title {
+    margin-top: 45px;
+    font-size: 54px;
+  }
+}
+
 .post-thumbnail img {
   display: block;
   width: 100%;
+}
+
+.post p {
+  font-size: 16px;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .post p {
+    margin-top: 30px;
+    font-size: 20px;
+  }
 }
 

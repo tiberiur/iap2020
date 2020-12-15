@@ -1,19 +1,60 @@
+.featured-post {
+	margin-top: 50px;
+	padding: 0 14px;
+	text-align: center;
+	@include responsive(md) {
+		margin-top: 75px;
+	}
+}
+
 .posts {
 	display: flex;
 	flex-wrap: wrap;
+	margin-bottom: 65px;
 }
 
 .post {
-	width: 50%;
-	padding: 0 14px;
-	margin-bottom: 65px;
-	color: #000;
-}
-.post-title {
-	font-size: 22px;
-	margin: 20px 0 0;
-}
-.post-thumbnail img {
 	display: block;
-	width: 100%;
+	padding: 0 14px;
+	margin-bottom: 40px;
+	color: #000;
+	@include responsive(sm) {
+		width: 50%;
+	}
+	@include responsive(md) {
+		margin-bottom: 65px;
+	}
+	.featured-post & {
+		width: 100%;
+		border-bottom: 1px solid #000;
+		margin-bottom: 0;
+		padding-bottom: 35px;
+	}
+	&-title {
+		font-size: 22px;
+		margin: 20px 0 0;
+		.featured-post & {
+			font-size: 36px;
+			margin-top: 20px;
+			@include responsive(md) {
+				margin-top: 45px;
+				font-size: 54px;
+			}
+		}
+	}
+	&-thumbnail {
+		img {
+			display: block;
+			width: 100%;
+		}
+	}
+	p {
+		font-size: 16px;
+		margin-top: 20px;
+		margin-bottom: 0;
+		@include responsive(md) {
+			margin-top: 30px;
+			font-size: 20px;
+		}
+	}
 }
