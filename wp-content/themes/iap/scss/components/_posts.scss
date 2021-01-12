@@ -33,6 +33,7 @@
 	&-title {
 		font-size: 22px;
 		margin: 20px 0 0;
+		line-height: $leading-none;
 		.featured-post & {
 			font-size: 36px;
 			margin-top: 20px;

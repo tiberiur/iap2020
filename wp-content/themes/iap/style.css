@@ -20,6 +20,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 body {
   font-family: "Tinos", serif;
   color: #000;
+  font-size: 16px;
+  line-height: 1.5;
   padding: 0;
   margin: 0;
 }
@@ -281,6 +283,7 @@ figure {
 .post-title {
   font-size: 22px;
   margin: 20px 0 0;
+  line-height: 1;
 }
 
 .featured-post .post-title {
@@ -311,5 +314,247 @@ figure {
     margin-top: 30px;
     font-size: 20px;
   }
+}
+
+.single {
+  width: 100%;
+  padding-bottom: 60px;
+}
+
+.single-container {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.single-title {
+  text-align: center;
+  max-width: 860px;
+  margin: 50px auto 30px;
+}
+
+.single-title h1 {
+  font-size: 36px;
+  margin: 0 0 30px;
+  line-height: 1;
+}
+
+@media only screen and (min-width: 768px) {
+  .single-title h1 {
+    font-size: 54px;
+  }
+}
+
+.single-title p {
+  margin: 0;
+  font-size: 24px;
+  color: #666;
+}
+
+.single-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  border-top: 2px solid #000;
+  margin-top: 30px;
+  padding: 30px 0;
+}
+
+@media only screen and (min-width: 640px) {
+  .single-meta {
+    flex-wrap: nowrap;
+  }
+}
+
+.single-meta img {
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.single-meta p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.single-meta strong {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.single-meta date {
+  display: block;
+  margin-top: 10px;
+}
+
+.single-meta .single-share {
+  width: 100%;
+  margin-top: 20px;
+}
+
+@media only screen and (min-width: 640px) {
+  .single-meta .single-share {
+    width: auto;
+    margin-top: 0;
+    margin-left: auto;
+  }
+}
+
+.single-meta .single-share a {
+  padding: 10px 25px;
+}
+
+.single-meta .single-share svg {
+  margin: 0;
+}
+
+.single-meta .single-share span {
+  display: none;
+}
+
+.single-content {
+  margin-top: 20px;
+  line-height: 1.625;
+}
+
+.single-content p,
+.single-content ul {
+  font-size: 20px;
+}
+
+.single-content p {
+  margin: 0 0 20px;
+}
+
+.single-content ul {
+  margin: 0;
+}
+
+.single-content li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 20px;
+}
+
+.single-content li:before {
+  content: " ";
+  width: 6px;
+  height: 6px;
+  transform: rotate(45deg);
+  background: #000;
+  position: absolute;
+  top: 13px;
+  left: 1px;
+}
+
+.single-content h2 {
+  font-size: 32px;
+  margin: 40px 0 20px;
+}
+
+.single-share {
+  border: 1px solid #EAEAEA;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.08);
+  border-radius: 4px;
+  display: flex;
+  margin-top: 75px;
+  overflow: hidden;
+}
+
+.single-share a {
+  color: #000;
+  text-decoration: none;
+  flex: 1;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.single-share a:first-child {
+  border-right: 1px solid #EAEAEA;
+}
+
+.single-share a:hover {
+  background: #F9FAFB;
+}
+
+.single-share a.facebook:hover {
+  color: #2d88ff;
+}
+
+.single-share a.facebook:hover svg {
+  fill: #2d88ff;
+}
+
+.single-share a.twitter:hover {
+  color: #1da1f2;
+}
+
+.single-share a.twitter:hover svg {
+  fill: #1da1f2;
+}
+
+.single-share a svg,
+.single-share a span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.single-share a span {
+  display: none;
+  margin-left: 10px;
+}
+
+@media only screen and (min-width: 640px) {
+  .single-share a span {
+    display: inline-block;
+  }
+}
+
+.single-share a svg {
+  fill: #000;
+}
+
+.single-tags {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.single-tags span {
+  margin-right: 5px;
+}
+
+.single-tags li {
+  display: inline-block;
+}
+
+.single-tags li:after {
+  content: ", ";
+}
+
+.single-tags li:last-of-type:after {
+  content: none;
+}
+
+.single-bio {
+  border-top: 1px dashed #000;
+  margin-top: 30px;
+  padding-top: 30px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.single-bio img {
+  margin-right: 25px;
+  border-radius: 50%;
+}
+
+.single-bio p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.single-bio strong {
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 

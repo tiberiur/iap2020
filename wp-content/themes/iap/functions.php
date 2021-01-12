@@ -39,7 +39,7 @@ function iap2020_theme_support() {
 	 * Let WordPress manage the document title.
 	 * This theme does not use a hard-coded <title> tag in the document head,
 	 * WordPress will provide it for us.
-	 */
+	*/
 	add_theme_support( 'title-tag' );
 }
 

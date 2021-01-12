@@ -1,0 +1,201 @@
+.single {
+    width: 100%;
+    padding-bottom: 60px;
+    
+    &-container {
+        max-width: 640px;
+        margin: 0 auto;
+    }
+
+    &-title {
+        text-align: center;
+        max-width: 860px;
+        margin: 50px auto 30px;
+        h1 {
+            font-size: 36px;
+            margin: 0 0 30px;
+            line-height: $leading-none;
+            @include responsive(md) {
+                font-size: 54px;
+            }
+        }
+        p {
+            margin: 0;
+            font-size: 24px;
+            color: #666;
+        }
+    }
+
+    &-meta {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        border-top: 2px solid #000;
+        margin-top: 30px;
+        padding: 30px 0;
+        @include responsive(sm) {
+            flex-wrap: nowrap;
+        }
+        img {
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+        p {
+            margin: 0;
+            font-size: 16px;
+            line-height: $leading-none;
+        }
+        strong {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        date {
+            display: block;
+            margin-top: 10px;
+        }
+        .single-share {
+            width: 100%;
+            margin-top: 20px;
+            @include responsive(sm) {
+                width: auto;
+                margin-top: 0;
+                margin-left: auto;
+            }
+            a {
+                padding: 10px 25px;
+            }
+            svg {
+                margin: 0;
+            }
+            span {
+                display: none;
+            }
+        }
+    }
+
+    &-content {
+        margin-top: 20px;
+        line-height: $leading-relaxed;
+
+        p,
+        ul {
+            font-size: 20px;
+        }
+
+        p {
+            margin: 0 0 20px;
+        }
+
+        ul {
+            margin: 0;
+        }
+
+        li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 20px;
+            &:before {
+                content: ' ';
+                width: 6px;
+                height: 6px;
+                transform: rotate(45deg);
+                background: #000;
+                position: absolute;
+                top: 13px;
+                left: 1px;
+            }
+        }
+
+        h2 {
+            font-size: 32px;
+            margin: 40px 0 20px;
+        }
+    }
+
+    &-share {
+        border: 1px solid #EAEAEA;
+        box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.08);
+        border-radius: 4px;
+        display: flex;
+        margin-top: 75px;
+        overflow: hidden;
+        a {
+            color: #000;
+            text-decoration: none;
+            flex: 1;
+            text-align: center;
+            padding: 20px 0;
+            &:first-child {
+                border-right: 1px solid #EAEAEA;
+            }
+            &:hover {
+                background: #F9FAFB;
+            }
+            &.facebook:hover {
+                color: #2d88ff;
+                svg {
+                    fill: #2d88ff;
+                }
+            }
+            &.twitter:hover {
+                color: #1da1f2;
+                svg {
+                    fill: #1da1f2;
+                }
+            }
+            svg, span {
+                display: inline-block;
+                vertical-align: middle;
+            }
+            span {
+                display: none;
+                margin-left: 10px;
+                @include responsive(sm) {
+                    display: inline-block;
+                }
+            }
+            svg {
+                fill: #000;
+            }
+        }
+    }
+
+    &-tags {
+        display: flex;
+        align-items: center;
+        margin-top: 30px;
+        span {
+            margin-right: 5px;
+        }
+        li {
+            display: inline-block;
+            &:after {
+                content: ', ';
+            }
+            &:last-of-type:after {
+                content: none;
+            }
+        }
+    }
+
+    &-bio {
+        border-top: 1px dashed #000;
+        margin-top: 30px;
+        padding-top: 30px;
+        display: flex;
+        align-items: flex-start;
+        img {
+            margin-right: 25px;
+            border-radius: 50%;
+        }
+        p {
+            margin: 0;
+            font-size: 16px;
+        }
+        strong {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+    }
+
+}
