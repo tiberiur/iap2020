@@ -5,29 +5,24 @@
 		<?php the_excerpt() ?>
 	</header>
 
+	<!-- Featured image -->
+
 	<div class="single-container">
-		<?php get_template_part( 'template-parts/post/meta' ); ?>
+		<?php get_template_part('template-parts/post/meta'); ?>
 
 		<div class="single-content">
 			<?php the_content(); ?>
 		</div>
 
-		<?php get_template_part( 'template-parts/post/share' ); ?>
+		<?php get_template_part('template-parts/post/share'); ?>
+		<?php get_template_part('template-parts/post/tags'); ?>
+		<?php get_template_part('template-parts/post/author-bio'); ?>
 
-		<?php $post_tags = get_the_tags(); ?>
-		<?php if($post_tags): ?>
-		<div class="single-tags">
-			<span>Tags: </span>
-			<ul>
-				<?php foreach($post_tags as $tag): ?>
-					<li><?= $tag->name ?></li>
-				<?php endforeach ?>
-			</ul>
-		</div>
-		<?php endif ?>
-		
-		<?php get_template_part( 'template-parts/post/author-bio' ); ?>
 	</div>
+
+	<?php get_template_part('template-parts/post/related'); ?>
+
+	<?php get_template_part('template-parts/post/newsletter'); ?>
 
     <script>
     (function() {
